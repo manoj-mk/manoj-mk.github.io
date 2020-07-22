@@ -434,7 +434,7 @@ class="week"></div><div class="week"></div><div class="week"></div></div></div>
 	<h5 id="weeks_count" class="text-center" ></h5>
 	<h4 id="time_count" class="text-center" >Time is running - <span id="time" ></span> </h4>
 	<script>
-		let i = 0;
+		let i = 3;
 		let Total_weeks = 3128;
 		document.getElementById('time_count').style.display = 'none';
 		function cal(){
@@ -445,12 +445,12 @@ class="week"></div><div class="week"></div><div class="week"></div></div></div>
 			let weeks = difference/(1000*7*3600*24);
 			let weeks_count = document.getElementById('weeks_count');
 			let week = document.getElementsByClassName('week');
-			if(i<weeks){
+			if(i<weeks+3){
 				week[i].style.backgroundColor = '#4be950';
 				weeks_count.innerHTML = i-'0' + '/3128 (weeks)'; 
 			}
 			i+=1;
-			if(i<weeks){
+			if(i<weeks+3){
 				setTimeout(cal,.01);
 			}
 			else{
